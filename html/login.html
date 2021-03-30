@@ -20,20 +20,17 @@
       <div class="login">
         <form id="form">
           <h2>Anmelden</h2>
-          <input type="text" placeholder="Benutzername oder E-Mail" />
+          <input type="text" id="email" placeholder="E-Mail" onkeyup="ValidEmail()" />
           <br />
-          <input type="password" minlength="12" placeholder="Passwort" />
+          <input type="password" id="password"  minlength="12" placeholder="Passwort" onkeyup="ValidPassword()" />
           <br />
-          <input id="submit" type="submit" value="Anmleden" onclick="HiddenDiv()"/>
+          <input type="submit" id="submit" value="Anmleden"/>
         </form>
       </div>
 
-      <div class="impressum">
+      <div class="imprint">
         <p>Hallo</p>
       </div>
     </div>
   </body>
-
-
 </html>
-
