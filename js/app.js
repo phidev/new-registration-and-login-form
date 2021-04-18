@@ -10,22 +10,17 @@ function ValidPassword() {
     console.log("No Match");
   }
 }
-
 function ValidEmail() {
   let email = document.getElementById("email").value;
-  let regex = RegExp("^[^s@]+@[^s@]+.[^s@]+$").test(email); // Matcht nicht !
-
+  let regex = RegExp("^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$").test(email); // Matcht nicht. Nach .de .com .deineMutter soll kein Leerzeichen erlaubt sein.
   if (regex) {
-    document.getElementById("email").style.backgroundColor = "green";
+    console.log("Match");
   } else {
-    document.getElementById("email").style.backgroundColor = "red";
+    console.log("No Match");
   }
 }
-
 $(document).ready(function () {
   $("p").click(function () {
     $(".imprint").hide("slow");
   });
 });
-
-//new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})");

@@ -20,16 +20,17 @@
       <div class="login">
         <form id="form">
           <h2>Anmelden</h2>
-          <input type="text" id="email" placeholder="E-Mail" onkeyup="ValidEmail()" />
+          <input type="email" id="email" autocomplete="email"  placeholder="E-Mail" onkeydown="ValidEmail()" />
+          <input type="password" id="password"  minlength="12" autocomplete="current-password" placeholder="Passwort" onkeyup="ValidPassword()" />
           <br />
-          <input type="password" id="password"  minlength="12" placeholder="Passwort" onkeyup="ValidPassword()" />
-          <br />
+         <!--&#9747; &#9996;--> 
           <input type="submit" id="submit" value="Anmleden"/>
         </form>
       </div>
 
       <div class="imprint">
-        <p>Hallo</p>
+        <p>Hallo Welt!</p>
+        
       </div>
     </div>
   </body>
