@@ -4,69 +4,90 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../css/reg.css" />
-    <link rel="stylesheet" 
-          href=
-"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/registration.css" />
     <title>Registrieren</title>
   </head>
+
   <body>
     <div class="registration-wrapper">
       <div class="registration-header"></div>
 
       <div class="registration-sidenav">
-          <p>Auf der rechten Seite hast du die Möglichkeit dich zu Registrieren.</p>
-          <p>Klar was ich meine !?</p>
+        <p>
+          Auf der rechten Seite hast du die Möglichkeit dich zu Registrieren.
+        </p>
+        <p>Klar was ich meine !?</p>
       </div>
 
       <div class="registration-form">
         <h2>Registrieren</h2>
         <form action="#" method="POST">
-          <input
-            type="text"
-            name="username"
-            placeholder="Wie sollen wir dich nennen?"
-            autocomplete="off"
-            maxlength="25"
-          />
-          <br />
-          <input
-            type="email"
-            name="email"
-            placeholder="Deine E-Mail Adresse"
-            maxlength="25"
-          />
-          <br />
-          <input type="password" name="password" placeholder="Dein Passwort" />
-          <br />
-          <input
-            type="password"
-            name="password-confirm"
-            placeholder="Wiederhole dein Passwort"
-          />
-          <br />
+          <div class="input-buttons">
+            <input
+              type="text"
+              name="username"
+              placeholder="Wie sollen wir dich nennen?"
+              autocomplete="off"
+              minlength="2"
+              maxlength="25"
+              required
+            />
+
+            <input
+              type="email"
+              name="email"
+              placeholder="Deine E-Mail Adresse"
+              minlength="6"
+              maxlength="25"
+              required
+            />
+
+            <input
+              type="password"
+              name="password"
+              placeholder="Dein Passwort"
+              pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+              required
+            />
+
+            <input
+              type="password"
+              name="password-confirm"
+              placeholder="Wiederhole dein Passwort"
+              pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+              required
+            />
+          </div>
+
           <p class="password-info">
             Bitte sorge dafür, dass dein Passwort aus mindestens
-            <strong>8</strong> Zeichen besteht. Es muss mindestens eine
-            <strong>Zahl</strong> und ein <strong>Sonderzeichen</strong> enthalten sein sein.
+            <strong>8</strong> Zeichen besteht. Es muss mindestens ein
+            <strong>Großbuchstabe</strong> sowie eine
+            <strong>Zahl</strong> enthalten sein sein.
           </p>
 
           <p class="hint">
             Mit Klick auf "Registrieren" stimmst du unseren
-            <a href="../txt/agb.txt" target="_blank">AGB's</a> zu. In unseren
-            <a href="../txt/datenschutz.txt" target="_blank"
+            <a href="../txt/conditions.txt" target="_blank">AGB's</a> zu. In
+            unseren
+            <a href="../txt/privacy.txt" target="_blank"
               >Datenschutzrichtlinien</a
             >
             kannst du erfahren, wie wir deine Daten erfassen, verwenden und
             teilen.
           </p>
 
-          <p class="member">Schon Mitglied? <a href="login.html">Jetzt Anmelden!</a></p>
-          <input
-            type="submit"
-            name="registration-submit"
-            value="Registrieren"
-          />
+          <p class="member">
+            Schon Mitglied? <a href="login.html">Jetzt Anmelden!</a>
+          </p>
+
+          <div class="submit">
+            <input
+              type="submit"
+              name="registration-submit"
+              value="Registrieren"
+            />
+          </div>
         </form>
       </div>
 
