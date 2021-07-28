@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/registration.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
     <title>Registrieren</title>
   </head>
 
@@ -16,47 +20,47 @@
         <p>
           Auf der rechten Seite hast du die Möglichkeit dich zu Registrieren.
         </p>
-        <p>Klar was ich meine !?</p>
+        <p>Klar was ich meine!?</p>
       </div>
 
       <div class="registration-form">
         <h2>Registrieren</h2>
-        <form action="#" method="POST">
+        <form name="form" id="form" action="#" method="POST">
           <div class="input-buttons">
             <input
               type="text"
               name="username"
               placeholder="Wie sollen wir dich nennen?"
               autocomplete="off"
-              minlength="2"
-              maxlength="25"
-              required
             />
+            <i class="material-icons">face</i>
+          </div>
 
+          <div class="input-buttons">
             <input
               type="email"
               name="email"
               placeholder="Deine E-Mail Adresse"
-              minlength="6"
-              maxlength="25"
-              required
             />
+            <i class="material-icons">mail</i>
+          </div>
 
+          <div class="input-buttons">
             <input
               type="password"
               name="password"
               placeholder="Dein Passwort"
-              pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
-              required
             />
+            <i class="material-icons">lock</i>
+          </div>
 
+          <div class="input-buttons">
             <input
               type="password"
               name="password-confirm"
               placeholder="Wiederhole dein Passwort"
-              pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
-              required
             />
+            <i class="material-icons">lock</i>
           </div>
 
           <p class="password-info">
@@ -84,6 +88,7 @@
           <div class="submit">
             <input
               type="submit"
+              id="submit"
               name="registration-submit"
               value="Registrieren"
             />
