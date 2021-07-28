@@ -1,9 +1,9 @@
 .registration-wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 0.2fr 0.5fr 0.2fr;
-  gap: 10px 10px;
+  grid-template-rows: 0.2fr 0.2fr 0.2fr;
   grid-template-columns: repeat(4, 1fr);
+  gap: 10px 10px;
   font-family: sans-serif;
 }
 a {
@@ -40,10 +40,16 @@ h2 {
   border: 2px black solid;
 }
 
+.input-buttons i {
+  position: absolute;
+  left: 10px;
+  top: 15px;
+  padding: 8px;
+  color: #000000;
+}
+
 .input-buttons {
-  display: grid;
-  justify-content: center;
-  align-items: center;
+  position: relative;
 }
 
 input[type="text"],
@@ -52,10 +58,13 @@ input[type="text"],
 [type="checkbox"] {
   font-size: x-large;
   margin: 10px;
+  margin-bottom: 0;
   padding: 10px;
   border: 2px black solid;
   border-radius: 5px;
   outline: none;
+  padding-left: 50px;
+  background-color: #ffffff;
 }
 
 input[type="submit"] {
@@ -80,6 +89,7 @@ input[type="submit"] {
   display: grid;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 .password-info {
