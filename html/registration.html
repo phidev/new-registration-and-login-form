@@ -9,6 +9,7 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
+
     <title>Registrieren</title>
   </head>
 
@@ -24,50 +25,63 @@
       </div>
 
       <div class="registration-form">
-        <h2>Registrieren</h2>
-        <form name="form" id="form" action="#" method="POST">
+        <div class="header"><h2>Registrieren</h2></div>
+
+        <form name="form" id="form" action="material.html" method="post">
           <div class="input-buttons">
             <input
               type="text"
               name="username"
+              id="username"
               placeholder="Wie sollen wir dich nennen?"
+              maxlength="20"
               autocomplete="off"
             />
             <i class="material-icons">face</i>
+            <small>Error Message</small>
           </div>
 
           <div class="input-buttons">
             <input
-              type="email"
+              type="text"
               name="email"
+              id="email"
+              maxlength="30"
               placeholder="Deine E-Mail Adresse"
             />
             <i class="material-icons">mail</i>
+            <small>Error Message</small>
           </div>
 
           <div class="input-buttons">
             <input
               type="password"
               name="password"
+              id="password"
               placeholder="Dein Passwort"
+              autocomplete="on"
             />
             <i class="material-icons">lock</i>
+            <small>Error Message</small>
           </div>
 
           <div class="input-buttons">
             <input
               type="password"
               name="password-confirm"
+              id="password-confirm"
               placeholder="Wiederhole dein Passwort"
+              autocomplete="on"
             />
             <i class="material-icons">lock</i>
+            <small>Error Message</small>
           </div>
 
           <p class="password-info">
             Bitte sorge dafür, dass dein Passwort aus mindestens
             <strong>8</strong> Zeichen besteht. Es muss mindestens ein
-            <strong>Großbuchstabe</strong> sowie eine
-            <strong>Zahl</strong> enthalten sein sein.
+            <strong>klein- und Großbuchstabe</strong> sowie eine
+            <strong>Zahl</strong> enthalten sein.
           </p>
 
           <p class="hint">
@@ -98,5 +112,7 @@
 
       <div class="registration-footer"></div>
     </div>
+
+    <script src="../js/registration.js"></script>
   </body>
 </html>
