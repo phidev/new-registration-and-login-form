@@ -1,36 +1,27 @@
-body {
+.login-wrapper {
   font-family: sans-serif;
-}
-.wrapper {
   display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: 0.3fr 1.3fr 0.3fr;
   gap: 15px 0px;
 }
-input:focus:invalid {
-  border-color: #f00;
+a {
+  text-decoration: none;
 }
-input:focus:valid {
-  border-color: green;
-}
-.header {
-  grid-column: 1/7;
-  grid-row: 1/2;
-  border-radius: 8px;
-  background-color: #003f8c;
-}
-.login {
+
+.login-form {
   grid-column: 2/4;
   grid-row: 2;
   border: solid black 3px;
   border-radius: 8px;
 }
-.imprint {
+.member {
   grid-column: 2/4;
   grid-row: 3;
   border: solid black 2px;
   border-radius: 8px;
-  background-color: #808080;
+  text-align: center;
 }
 #form {
   text-align: center;
@@ -56,7 +47,7 @@ input[type="submit"] {
   padding: 10px;
   border: 2px black solid;
   border-radius: 5px;
-  background-color: #003f8c;
+  background-color: darkblue;
   color: #ffffff;
   outline: none;
   cursor: pointer;
@@ -66,7 +57,13 @@ input:hover {
   color: #000000;
 }
 
-.buttons {
+input[type="submit"]:hover {
+  background-color: #0275d8;
+  color: #ffffff;
+}
+
+
+.login-button {
   text-align: center;
   position: relative;
 }
