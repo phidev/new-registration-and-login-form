@@ -4,33 +4,45 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap"
-      rel="stylesheet"
-    />
-    <link href="../css/style.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="../css/login.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="../js/app.js"></script>
     <title>Document</title>
   </head>
 
   <body>
-    <div class="wrapper">
-      <div class="header"></div>
-      <div class="login">
+    <div class="login-wrapper">
+      <div class="login-form">
         <form id="form">
           <h2>Anmelden</h2>
-          <input type="email" id="email" autocomplete="email"  placeholder="E-Mail" onkeydown="ValidEmail()" />
-          <input type="password" id="password"  minlength="12" autocomplete="current-password" placeholder="Passwort" onkeyup="ValidPassword()" />
+          <input
+            type="email"
+            name="email"
+            autocomplete="email"
+            placeholder="E-Mail"
+            onkeydown="validEmail()"
+          />
+          <input
+            type="password"
+            name="password"
+            minlength="12"
+            autocomplete="current-password"
+            placeholder="Passwort"
+            onkeydown="ValidPassword()"
+          />
           <br />
-         <!--&#9747; &#9996;--> 
-          <input type="submit" id="submit" value="Anmleden"/>
+          <div class="login-button">
+            <input type="submit" id="submit" value="Anmleden" />
+          </div>
         </form>
       </div>
-      
-      <div class="imprint">
-        <p>Hallo Welt!</p>
-        
+
+      <div class="member">
+        <p>
+          Du hast noch kein Konto? Jetzt
+          <a href="../html/registration.html">Registrieren!</a>
+        </p>
       </div>
     </div>
   </body>
